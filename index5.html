@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>动态绑定css样式</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+
+<body>
+    <!-- vue-app 根容器 和vue对象中的el保持一致 name 数据绑定必须在根容器vue-app下才有效-->
+    <div id="vue-app">
+        <h1>动态绑定css样式</h1>
+        <h2>demo 1</h2>
+        <!--  v-bind:class="{changeColor:changeColor} changeColor为true绑定样式changeColor，为false使用span默认样式 -->
+        <!-- <div @click="changeColor = !changeColor " v-bind:class="{changeColor:changeColor}">
+                <span>点击颜色取反</span>
+        </div> -->
+        <h2>demo 2</h2>
+        <button @click="changeColor = !changeColor">颜色取反</button>
+        <button @click="changeLength = !changeLength">长度取反</button>
+        <div v-bind:class="compClasses">
+            <span>Herry</span>
+        </div>
+    </div>
+    <script src="app5.js"></script>
+</body>
+
+</html>
+

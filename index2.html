@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>键盘事件</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+
+<body>
+    <!-- vue-app 根容器 和vue对象中的el保持一致 name 数据绑定必须在根容器vue-app下才有效-->
+    <div id="vue-app">
+       <h1>Keyboard Events</h1>
+       <label>Name:</label>
+       <!-- v-on:keyup.enter 敲回车键事件 -->
+       <input type="text" v-on:keyup.enter="logName"/>
+       <label for="Age">Age:</label>
+       <!-- v-on:keyup.alt.enter 敲 alt+ctrl 事件 -->
+       <input type="text" v-on:keyup.alt.enter="logAge">
+    </div>
+    <script src="app2.js"></script>
+</body>
+
+</html>
+

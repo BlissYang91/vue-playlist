@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>v-if 条件渲染</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+
+<body>
+    <!-- vue-app 根容器 和vue对象中的el保持一致 name 数据绑定必须在根容器vue-app下才有效-->
+    <div id="vue-app">
+        <h1>v-if show 条件渲染</h1>
+        <button @click="error = !error">Toggle Error</button>
+        <button @click="success = !success">Toggle Success</button>
+        <!-- 如果if条件为真显示节点，为false，整个节点不显示 -->
+        <!-- <p v-if="error">网络连接错误 404</p>
+        <p v-else-if="success">网络连接成功 200</p> -->
+
+        <!-- 如果show条件为真显示节点，为false，以style="display:none"的形式占位 标签依然会存在只是不显示 -->
+        <p v-show="error">网络连接错误 404</p>
+        <p v-show="success">网络连接成功 200</p>
+    </div>
+    <script src="app6.js"></script>
+</body>
+
+</html>
+

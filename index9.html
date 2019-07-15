@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>多个vue对象</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+
+<body>
+    <!-- vue-app 根容器 和vue对象中的el保持一致 title greet() 数据绑定必须在根容器vue-app下才有效-->
+    <h1>Multiple Vue instances</h1>
+    <div id="vue-app-one">
+        <h2>{{title}}</h2>
+        <p>{{greet}}</p>
+    </div>
+
+    <div id="vue-app-two">
+        <h2>{{title}}</h2>
+        <p>{{greet}}</p>
+        <button @click="changeTitle">Change App One Title</button>
+    </div>
+    <script src="app9.js"></script>
+</body>
+
+</html>

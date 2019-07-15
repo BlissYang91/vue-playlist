@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>双向数据绑定</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+
+<body>
+    <!-- vue-app 根容器 和vue对象中的el保持一致 name 数据绑定必须在根容器vue-app下才有效-->
+    <div id="vue-app">
+       <h1>Keyboard Events</h1>
+       <label>Name:</label>
+       <input type="text" v-on:keyup.enter="logName" v-model="name">
+       <span>{{name}}</span>
+       <label for="Age">Age:</label>
+       <!-- v-on:keyup.alt.enter 敲 alt+ctrl 事件 -->
+       <input type="text" v-on:keyup.alt.enter="logAge" v-model="age">
+       <span>{{age}}</span>
+
+        <label >refName:</label>
+        <input type="text" v-on:keyup.enter="logNameref" ref="nameRef">
+        <span>{{nameRef}}</span>
+        <label for="Age">refAge:</label>
+        <!-- v-on:keyup.alt.enter 敲 alt+ctrl 事件 -->
+        <input type="text" v-on:keyup.alt.enter="logAgeref" ref="ageRef">
+        <span>{{ageRef}}</span>
+    </div>
+    <script src="app3.js"></script>
+</body>
+
+</html>
+

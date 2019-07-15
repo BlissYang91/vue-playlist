@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>点击事件</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+
+<body>
+    <!-- vue-app 根容器 和vue对象中的el保持一致 name 数据绑定必须在根容器vue-app下才有效-->
+    <div id="vue-app">
+        <h1>Events</h1>
+        <button @click.once="add(1)">加</button>
+        <button @click="subtract(1)">减</button>
+        <button v-on:dblclick="add(10)">Add 10 Years</button>
+        <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
+        <p>My age is {{age}}</p>
+        <div id="canvas" v-on:mousemove="updataXY">{{x}},{{y}} - <span v-on:mousemove.stop></span>Stop Moving</div>
+        <p><a @click.prevent="clicktest" href="http://www.thenetninja.co.uk">点击事件阻塞，prevent不跳转</a></p>
+    </div>
+    <script src="app1.js"></script>
+</body>
+
+</html>
